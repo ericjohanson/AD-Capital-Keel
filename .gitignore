@@ -1,0 +1,17 @@
+# Do not check in personal env variables
+env-*.sh
+*.env.*
+
+# Agent download sub-dirs
+3.*/**
+4.*/**
+*-build*/**
+
+# Ignore jdk rpms
+jdk-*.rpm
+
+#ignore Tomcat distro files
+*.tar.gz
+
+#ignore MacOS 
+*.DS_Store
