@@ -23,12 +23,10 @@ ENV GRADLE_HOME $PROJECT/gradle-2.1
 ENV PATH $PATH:$GRADLE_HOME/bin
 ENV NETVIS_HOME /
 
-RUN ls -laF
-
 ADD startup.sh /
 RUN chmod 744 /startup.sh
 
-ADD appd-netviz-x64-linux-4.5.0.1000 /opt/appdynamics/ver4.4.3.22593/external-services
+#ADD appd-netviz-x64-linux-4.5.0.1000 /opt/appdynamics/ver4.4.3.22593/external-services
 
 #RUN ./opt/appdynamics/ver4.4.3.22593/external-services/install.sh
 
