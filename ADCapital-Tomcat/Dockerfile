@@ -6,10 +6,10 @@ FROM appddemo/java-agent-tomcat:4.3
 #FROM store/appdynamics/java:4.3.7.1_tomcat9-jre8
 
 #UBUNTU Specific, 4.4 went to APK
-#RUN apt-get update
-#RUN apt-get install -y yum
+RUN apt-get update
+RUN apt-get install -y yum
 
-RUN apk update && apk upgrade
+#RUN apk update && apk upgrade
 
 
 ENV DOCKERIZE_VERSION v0.5.0
