@@ -1,6 +1,9 @@
 #FROM appddemo/java-agent-tomcat:4.4
+FROM appddemo/java-agent-tomcat:4.3
+
+
 #FROM store/appdynamics/java:4.4_tomcat9-jre8-alpine
-FROM store/appdynamics/java:4.3.7.1_tomcat9-jre8
+#FROM store/appdynamics/java:4.3.7.1_tomcat9-jre8
 
 #UBUNTU Specific, 4.4 went to APK
 #RUN apt-get update
