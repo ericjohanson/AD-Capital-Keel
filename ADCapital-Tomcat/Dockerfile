@@ -25,7 +25,9 @@ ENV PROJECT /project
 ENV GRADLE_HOME $PROJECT/gradle-2.1
 ENV PATH $PATH:$GRADLE_HOME/bin
 ENV NETVIS_HOME /
-ENV TEST_KEEL /var/log
+
+#TEST FOR KEEL TO UPDATE REPO
+#ENV TEST_KEEL /var/log
 
 ADD startup.sh /
 RUN chmod 744 /startup.sh
