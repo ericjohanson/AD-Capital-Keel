@@ -1,16 +1,16 @@
-#FROM appddemo/java-agent-tomcat:4.4
-FROM appddemo/java-agent-tomcat:4.3
+FROM appddemo/java-agent-tomcat:4.4
+#FROM appddemo/java-agent-tomcat:4.3
 
 
 #FROM store/appdynamics/java:4.4_tomcat9-jre8-alpine
 #FROM store/appdynamics/java:4.3.7.1_tomcat9-jre8
 
 #4.3 AGENT SPECIFIC
-RUN apt-get update
-RUN apt-get install -y yum
+#RUN apt-get update
+#RUN apt-get install -y yum
 
 #4.4 AGENT SPECIFIC
-#RUN apk update && apk upgrade
+RUN apk update && apk upgrade
 
 
 ENV DOCKERIZE_VERSION v0.5.0
