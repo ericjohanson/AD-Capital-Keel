@@ -13,7 +13,7 @@ configure-analytics(){
   echo "CONTROLLER_ENDPOINT: ${CONTROLLER_ENDPOINT//\\/}"
 
   if [ "${APPD_ES_SSL}" == "true" ]; then EVENT_ENDPOINT="https:\/\/"; else EVENT_ENDPOINT="http:\/\/"; fi
-  EVENT_ENDPOINT+="${APPD_ES_HOST}:${APPD_ES_PORT}\/v1"
+  EVENT_ENDPOINT+="${APPD_ES_HOST}:${APPD_ES_PORT}"
   echo "EVENT_ENDPOINT: ${EVENT_ENDPOINT//\\/}"
 
   sed -i "/^ad.controller.url=/c\ad.controller.url=${CONTROLLER_ENDPOINT}" ${aaprop}
