@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #https://docs.appdynamics.com/display/PRO44/Installing+Agent-Side+Components#InstallingAgent-SideComponents-ConfiguretheAnalyticsAgentforaRemoteHost
-export APPD_ANALYTICS_AGENT="-Dappdynamics.analytics.agent.url=http://analytics-agent:9090/v2/sinks/bt"
+export APPD_ANALYTICS_AGENT="-Dappdynamics.analytics.agent.url=http://analytics-agent1:9090/v2/sinks/bt"
 export APPD_JAVAAGENT="-javaagent:/opt/appdynamics/javaagent.jar"
 export NETWORK_AGENT="-Dappdynamics.socket.collection.bci.enable=true"
 
