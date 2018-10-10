@@ -33,7 +33,7 @@ portal)
   cp /${PROJECT}/AD-Capital/Portal/build/libs/portal.war ${CATALINA_HOME}/webapps;
   cd ${CATALINA_HOME}/bin;
 
-sed -i -e 's/127.0.0.1/'$APPDYNAMICS_NETVIZ_AGENT_HOST'/g' /opt/appdynamics/AppServerAgent/ver4.5.2.23880/external-services/netviz/netviz-service.properties
+  sed -i -e 's/127.0.0.1/'$APPDYNAMICS_NETVIZ_AGENT_HOST'/g' /opt/appdynamics/AppServerAgent/ver4.5.2.23880/external-services/netviz/netviz-service.properties
 
   /usr/lib/jvm/java-1.8-openjdk/jre/bin/java ${APPD_ANALYTICS_AGENT} ${NETWORK_AGENT} -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -javaagent:/opt/appdynamics/javaagent.jar -classpath /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/usr/local/tomcat -Dcatalina.home=/usr/local/tomcat -Djava.io.tmpdir=/usr/local/tomcat/temp org.apache.catalina.startup.Bootstrap start
   ;;
