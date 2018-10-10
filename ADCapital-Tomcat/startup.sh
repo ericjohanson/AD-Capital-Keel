@@ -4,8 +4,8 @@
 export APPD_ANALYTICS_AGENT="-Dappdynamics.analytics.agent.url=http://analytics-agent:9090/v2/sinks/bt"
 export APPD_JAVAAGENT="-javaagent:/opt/appdynamics/javaagent.jar"
 export NETWORK_AGENT="-Dappdynamics.socket.collection.bci.enable=true"
-export APPDYNAMICS_NETVIZ_AGENT_HOST=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
-export APPDYNAMICS_NETVIZ_AGENT_PORT=3892
+#export APPDYNAMICS_NETVIZ_AGENT_HOST=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
+#export APPDYNAMICS_NETVIZ_AGENT_PORT=3892
 
 # Specialize container behavior based on ROLE env var
 # Uses https://github.com/jwilder/dockerize to check service dependencies
