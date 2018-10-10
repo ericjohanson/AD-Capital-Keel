@@ -36,7 +36,7 @@ RUN chmod 744 /startup.sh
 ADD setenv.sh ${CATALINA_HOME}/bin
 RUN chmod 744 ${CATALINA_HOME}/bin/setenv.sh
 
-RUN unzip /opt/appdynamics/ver4.5.2.23891/external-services/netviz.zip
+RUN unzip /opt/appdynamics/ver4.5.2.23891/external-services/netviz.zip -d /opt/appdynamics/ver4.5.2.23891/external-services
 
 # Note: This command should not return or the container will exit
 CMD "/startup.sh"
