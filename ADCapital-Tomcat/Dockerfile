@@ -1,4 +1,5 @@
-FROM appddemo/java-agent-tomcat:4.4
+FROM appddemo/java-agent-tomcat:4.5
+#FROM appddemo/java-agent-tomcat:4.4
 #FROM appddemo/java-agent-tomcat:4.3
 
 
