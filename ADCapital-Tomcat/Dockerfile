@@ -33,15 +33,10 @@ ENV NETVIS_HOME /
 ADD startup.sh /
 RUN chmod 744 /startup.sh
 
-#ADD appd-netviz-x64-linux-4.5.0.1000 /opt/appdynamics/ver4.4.3.22593/external-services
-
-#RUN ./opt/appdynamics/ver4.4.3.22593/external-services/install.sh
-
 ADD setenv.sh ${CATALINA_HOME}/bin
 RUN chmod 744 ${CATALINA_HOME}/bin/setenv.sh
 
-RUN cd /opt/appdynamics/ver4.5.2.23891/external-services/
-RUN unzip netviz.zip
+RUN unzip /opt/appdynamics/ver4.5.2.23891/external-services/netviz.zip
 
 # Note: This command should not return or the container will exit
 CMD "/startup.sh"
