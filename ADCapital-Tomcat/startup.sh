@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #https://docs.appdynamics.com/display/PRO44/Installing+Agent-Side+Components#InstallingAgent-SideComponents-ConfiguretheAnalyticsAgentforaRemoteHost
-export APPD_ANALYTICS_AGENT="-Dappdynamics.analytics.agent.url=http://analytics-agent:9090/v2/sinks/bt"
+export APPD_ANALYTICS_AGENT="-Dappdynamics.analytics.agent.url=http://ec2-34-222-55-207.us-west-2.compute.amazonaws.com:9090/v2/sinks/bt"
 export APPD_JAVAAGENT="-javaagent:/opt/appdynamics/javaagent.jar"
 export NETWORK_AGENT="-Dappdynamics.socket.collection.bci.enable=true"
 #export APPDYNAMICS_NETVIZ_AGENT_HOST=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
